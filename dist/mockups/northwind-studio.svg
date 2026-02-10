@@ -1,0 +1,182 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#0F172A"/>
+    </linearGradient>
+    <radialGradient id="glowA" cx="74%" cy="16%" r="62%">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowB" cx="24%" cy="44%" r="58%">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".12"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bezel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#070B13"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38BDF8" stop-opacity=".92"/>
+      <stop offset="1" stop-color="#38BDF8" stop-opacity=".16"/>
+    </linearGradient>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="22" stdDeviation="22" flood-color="#000" flood-opacity=".58"/>
+    </filter>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+    <filter id="grain" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency=".78" numOctaves="2" stitchTiles="stitch"/>
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 .12 0"/>
+    </filter>
+
+    <clipPath id="deskClip">
+      <rect x="260" y="180" width="1080" height="580" rx="24"/>
+    </clipPath>
+    <clipPath id="lapClip">
+      <rect x="552" y="568" width="496" height="250" rx="18"/>
+    </clipPath>
+
+    <style>
+      .tH { font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif; font-weight: 760; letter-spacing: -0.02em; }
+      .tB { font-family: Inter, system-ui, -apple-system, Segoe UI, Arial, sans-serif; font-weight: 520; }
+      .mut { fill: #9CA3AF; }
+      .pri { fill: #E5E7EB; }
+      .acc { fill: #38BDF8; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#bg)"/>
+  <rect width="1600" height="1000" fill="url(#glowA)"/>
+  <rect width="1600" height="1000" fill="url(#glowB)"/>
+  <circle cx="430" cy="260" r="260" fill="#38BDF8" opacity=".10" filter="url(#soft)"/>
+
+  <!-- Desktop monitor -->
+  <g filter="url(#shadow)">
+    <rect x="220" y="140" width="1160" height="660" rx="34" fill="url(#bezel)" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <rect x="260" y="180" width="1080" height="580" rx="24" fill="#0B1220" stroke="#FFFFFF" stroke-opacity=".08"/>
+
+    <!-- Screen content (agency portfolio + case studies) -->
+    <g clip-path="url(#deskClip)">
+      <rect x="260" y="180" width="1080" height="580" fill="#0B1220"/>
+
+      <!-- Nav -->
+      <rect x="290" y="206" width="1020" height="54" rx="18" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".09"/>
+      <rect x="314" y="219" width="170" height="28" rx="14" fill="#38BDF8" opacity=".12"/>
+      <text x="334" y="238" class="tH pri" font-size="13">Northwind Studio</text>
+      <text x="565" y="239" class="tB mut" font-size="12">Work</text>
+      <text x="625" y="239" class="tB mut" font-size="12">Services</text>
+      <text x="710" y="239" class="tB mut" font-size="12">Process</text>
+      <text x="790" y="239" class="tB mut" font-size="12">Team</text>
+      <text x="850" y="239" class="tB mut" font-size="12">Contact</text>
+      <rect x="1160" y="219" width="130" height="28" rx="14" fill="url(#accent)"/>
+      <text x="1181" y="238" class="tB" font-size="12" fill="#07111F">Start a Project</text>
+
+      <!-- Hero -->
+      <text x="300" y="322" class="tH pri" font-size="40">Premium portfolio websites</text>
+      <text x="300" y="366" class="tH" font-size="40" fill="#38BDF8">for modern agencies</text>
+      <text x="300" y="405" class="tB mut" font-size="14">Case studies, minimal layout, strong typography and polished motion.</text>
+
+      <rect x="300" y="435" width="170" height="44" rx="18" fill="#38BDF8"/>
+      <text x="324" y="463" class="tB" font-size="13" fill="#07111F">View Case Studies</text>
+      <rect x="480" y="435" width="170" height="44" rx="18" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".12"/>
+      <text x="512" y="463" class="tB pri" font-size="13">Our Services</text>
+
+      <!-- Right-side “featured project” preview (looks like real screenshot) -->
+      <rect x="900" y="296" width="410" height="200" rx="26" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <text x="924" y="328" class="tB pri" font-size="12">Featured case study</text>
+      <text x="924" y="348" class="tB mut" font-size="11">Brand refresh + website redesign</text>
+
+      <rect x="924" y="368" width="362" height="108" rx="20" fill="#0B1220" stroke="#38BDF8" stroke-opacity=".18"/>
+      <!-- faux “hero image” inside card: gradient + silhouette shapes -->
+      <rect x="944" y="386" width="156" height="72" rx="16" fill="url(#tile)"/>
+      <path d="M956 446 C980 420, 1010 418, 1040 444" fill="none" stroke="#38BDF8" stroke-opacity=".35" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="1010" cy="412" r="8" fill="#38BDF8" opacity=".25"/>
+      <text x="1114" y="404" class="tH pri" font-size="14">Outcome</text>
+      <text x="1114" y="426" class="tB mut" font-size="11">+22% inquiries</text>
+      <text x="1114" y="446" class="tB mut" font-size="11">+18% time on page</text>
+
+      <!-- Project grid (actual thumbnails with labels) -->
+      <text x="300" y="525" class="tH pri" font-size="14">Selected work</text>
+      <text x="410" y="525" class="tB mut" font-size="12">(websites • UI systems • landing pages)</text>
+
+      <g>
+        <rect x="300" y="545" width="330" height="190" rx="26" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".10"/>
+        <rect x="324" y="569" width="282" height="138" rx="20" fill="#0B1220" stroke="#38BDF8" stroke-opacity=".16"/>
+        <text x="324" y="728" class="tB mut" font-size="11">B2B Consulting</text>
+        <text x="324" y="750" class="tB pri" font-size="12">Trust-led layout</text>
+        <!-- inside “thumbnail” -->
+        <rect x="344" y="589" width="120" height="14" rx="7" fill="#E5E7EB" opacity=".10"/>
+        <text x="344" y="628" class="tB" font-size="11" fill="#E5E7EB" opacity=".86">Services • Case studies • CTA</text>
+        <rect x="344" y="640" width="240" height="50" rx="14" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".10"/>
+        <text x="360" y="668" class="tB mut" font-size="10.5">Conversion-first sections</text>
+
+        <rect x="640" y="545" width="330" height="190" rx="26" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".10"/>
+        <rect x="664" y="569" width="282" height="138" rx="20" fill="#0B1220" stroke="#38BDF8" stroke-opacity=".16"/>
+        <text x="664" y="728" class="tB mut" font-size="11">Creative Agency</text>
+        <text x="664" y="750" class="tB pri" font-size="12">Case study system</text>
+        <text x="684" y="602" class="tB" font-size="11" fill="#E5E7EB" opacity=".86">Problem → Solution → Result</text>
+        <path d="M684 680 C726 656, 762 668, 806 642 C846 620, 880 632, 926 604" fill="none" stroke="#38BDF8" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M684 680 C726 656, 762 668, 806 642 C846 620, 880 632, 926 604 L926 694 L684 694 Z" fill="#38BDF8" opacity=".10"/>
+
+        <rect x="980" y="545" width="330" height="190" rx="26" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".10"/>
+        <rect x="1004" y="569" width="282" height="138" rx="20" fill="#0B1220" stroke="#38BDF8" stroke-opacity=".16"/>
+        <text x="1004" y="728" class="tB mut" font-size="11">SaaS Landing</text>
+        <text x="1004" y="750" class="tB pri" font-size="12">Conversion flow</text>
+        <text x="1024" y="602" class="tB" font-size="11" fill="#E5E7EB" opacity=".86">Hero • Proof • Pricing • CTA</text>
+        <rect x="1024" y="628" width="160" height="34" rx="17" fill="#38BDF8"/>
+        <text x="1046" y="650" class="tB" font-size="11" fill="#07111F">Get started</text>
+        <rect x="1192" y="628" width="72" height="34" rx="17" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".12"/>
+        <text x="1206" y="650" class="tB pri" font-size="11">Demo</text>
+      </g>
+
+      <!-- Grain and subtle reflection -->
+      <rect x="260" y="180" width="1080" height="580" filter="url(#grain)" opacity=".30"/>
+      <path d="M260 180 L1340 180 L1340 760" fill="none" stroke="#38BDF8" stroke-opacity=".06" stroke-width="80"/>
+    </g>
+
+    <!-- Stand -->
+    <path d="M720 800h160c10 0 18 8 18 18v34H702v-34c0-10 8-18 18-18z" fill="#111827" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <path d="M620 852h360c12 0 22 10 22 22v28H598v-28c0-12 10-22 22-22z" fill="#070B13" stroke="#FFFFFF" stroke-opacity=".08"/>
+  </g>
+
+  <!-- Laptop overlay -->
+  <g filter="url(#shadow)">
+    <rect x="510" y="540" width="580" height="330" rx="26" fill="url(#bezel)" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <rect x="552" y="568" width="496" height="250" rx="18" fill="#0B1220" stroke="#FFFFFF" stroke-opacity=".08"/>
+
+    <g clip-path="url(#lapClip)">
+      <rect x="552" y="568" width="496" height="250" fill="#0B1220"/>
+      <rect x="574" y="586" width="452" height="34" rx="14" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".09"/>
+      <text x="594" y="607" class="tH pri" font-size="12">Northwind</text>
+      <text x="680" y="607" class="tB mut" font-size="11">Work</text>
+      <text x="724" y="607" class="tB mut" font-size="11">Process</text>
+      <rect x="934" y="594" width="92" height="18" rx="9" fill="url(#accent)"/>
+      <text x="950" y="607" class="tB" font-size="10.5" fill="#07111F">Contact</text>
+
+      <text x="574" y="666" class="tH pri" font-size="24">Case study layout</text>
+      <text x="574" y="690" class="tB mut" font-size="12">Minimal sections, strong hierarchy, clean grid.</text>
+
+      <rect x="574" y="712" width="220" height="94" rx="18" fill="#0F172A" stroke="#38BDF8" stroke-opacity=".18"/>
+      <text x="594" y="740" class="tB pri" font-size="11">Result</text>
+      <text x="594" y="762" class="tB mut" font-size="10.5">+34% inquiries</text>
+      <text x="594" y="782" class="tB mut" font-size="10.5">+22% engagement</text>
+
+      <rect x="808" y="712" width="218" height="94" rx="18" fill="#0F172A" stroke="#FFFFFF" stroke-opacity=".10"/>
+      <text x="828" y="740" class="tB pri" font-size="11">System</text>
+      <text x="828" y="762" class="tB mut" font-size="10.5">Typography scale</text>
+      <text x="828" y="782" class="tB mut" font-size="10.5">Component library</text>
+
+      <rect x="552" y="568" width="496" height="250" filter="url(#grain)" opacity=".26"/>
+    </g>
+
+    <path d="M490 870h620c22 0 40 18 40 40v14H450v-14c0-22 18-40 40-40z" fill="#070B13" stroke="#FFFFFF" stroke-opacity=".10"/>
+    <rect x="720" y="898" width="170" height="10" rx="5" fill="#E5E7EB" opacity=".08"/>
+  </g>
+</svg>

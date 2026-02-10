@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  --bg: #0f172a;
+  --surface: #111827;
+  --accent: #38bdf8;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+
+  --ring: rgba(56, 189, 248, 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(
+      1200px 600px at 20% 10%,
+      rgba(56, 189, 248, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 90% 30%,
+      rgba(56, 189, 248, 0.08),
+      transparent 55%
+    ),
+    var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+h1,
+h2,
+h3 {
+  font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Noto Sans";
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.25);
+}
+
+/* Subtle premium scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(156, 163, 175, 0.35) rgba(17, 24, 39, 0.35);
+}
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.35);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track {
+  background: rgba(17, 24, 39, 0.35);
+}
+
+/* Fade-in utility */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Preview card entrance (fade + slight scale) */
+@keyframes preview-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-preview-in {
+  animation: preview-in 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+/* Progress fill (90%) */
+@keyframes progress-90 {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+
+.animate-progress-90 {
+  animation: progress-90 1100ms cubic-bezier(0.2, 0.9, 0.2, 1) 120ms both;
+}
+
+/* Subtle premium motion for the preview (kept minimal) */
+@keyframes preview-scroll {
+  0% {
+    object-position: 50% 0%;
+  }
+  50% {
+    object-position: 50% 45%;
+  }
+  100% {
+    object-position: 50% 0%;
+  }
+}
+
+@keyframes soft-float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-preview-scroll {
+  animation: preview-scroll 14s ease-in-out infinite;
+}
+
+.animate-soft-float {
+  animation: soft-float 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-fade-up,
+  .animate-preview-in,
+  .animate-progress-90,
+  .animate-preview-scroll,
+  .animate-soft-float {
+    animation: none;
+  }
+}
